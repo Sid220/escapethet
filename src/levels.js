@@ -60,8 +60,6 @@ class Levels extends Phaser.Scene {
         levelZones.push(this.add.zone(640, 510, 100, 100).setDropZone());
         levelZones.push(this.add.zone(800, 510, 100, 100).setDropZone());
 
-        let showZone = levelZones[19];
-
         switch (parseInt(localStorage.getItem("level"))) {
             case 0:
                 this.add.image(50, 140, "train");

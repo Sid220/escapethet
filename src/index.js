@@ -27,6 +27,6 @@ const config = {
 
 new Phaser.Game(config);
 
-// window.alert = function(message) {
-//     console.log(message);
-// }
+window.alert = function(message) {
+    console.log(message);
+}

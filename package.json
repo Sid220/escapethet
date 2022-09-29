@@ -6,7 +6,11 @@
     "scripts": {
         "start": "node scripts/start.js"
     },
-    "keywords": ["PhaserJS", "JavaScript", "Game"],
+    "keywords": [
+        "PhaserJS",
+        "JavaScript",
+        "Game"
+    ],
     "author": "Ferenc Almasi",
     "license": "ISC",
     "dependencies": {

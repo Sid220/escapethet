@@ -1,7 +1,7 @@
 import Player from './objects/Player.min.js'
 import Cactus from './objects/Cactus.min.js'
 
-import Levels from './levels.min.js';
+// import Levels from './levels.min.js';
 
 import { showScore, resetScore } from './ui/score.min.js'
 import { hidePressToPlay, hideGameOver } from './ui/gameState.min.js'
