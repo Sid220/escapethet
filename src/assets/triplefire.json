@@ -1,0 +1,30 @@
+{
+    "frames": [
+        {
+            "filename": "triplefireanim_0",
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 384,
+                "h": 192
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "triplefireanim_1",
+            "frame": {
+                "x": 0,
+                "y": 192,
+                "w": 384,
+                "h": 192
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ]
+}

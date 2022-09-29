@@ -1,0 +1,30 @@
+{
+    "frames": [
+        {
+            "filename": "singlefireanim_0",
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 192,
+                "h": 192
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "singlefireanim_1",
+            "frame": {
+                "x": 0,
+                "y": 192,
+                "w": 192,
+                "h": 192
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/src/animations/index.min.js" />
+        <item url="file://$PROJECT_DIR$/src/dino.min.js" />
+        <item url="file://$PROJECT_DIR$/src/index.min.js" />
+        <item url="file://$PROJECT_DIR$/src/levels.min.js" />
+        <item url="file://$PROJECT_DIR$/src/objects/Cactus.min.js" />
+        <item url="file://$PROJECT_DIR$/src/objects/Player.min.js" />
+        <item url="file://$PROJECT_DIR$/src/ui/gameState.min.js" />
+        <item url="file://$PROJECT_DIR$/src/ui/score.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/animations/index.min.js" />
+      <root url="file://$PROJECT_DIR$/src/dino.min.js" />
+      <root url="file://$PROJECT_DIR$/src/index.min.js" />
+      <root url="file://$PROJECT_DIR$/src/levels.min.js" />
+      <root url="file://$PROJECT_DIR$/src/objects/Cactus.min.js" />
+      <root url="file://$PROJECT_DIR$/src/objects/Player.min.js" />
+      <root url="file://$PROJECT_DIR$/src/ui/gameState.min.js" />
+      <root url="file://$PROJECT_DIR$/src/ui/score.min.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

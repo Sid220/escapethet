@@ -1,0 +1,56 @@
+{
+    "frames": [
+        {
+            "filename": "charlie_0",
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 32
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "charlie_1",
+            "frame": {
+                "x": 0,
+                "y": 32,
+                "w": 32,
+                "h": 32
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "charlie_2",
+            "frame": {
+                "x": 0,
+                "y": 32,
+                "w": 32,
+                "h": 32
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "charlie_3",
+            "frame": {
+                "x": 0,
+                "y": 96,
+                "w": 32,
+                "h": 32
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ]
+}

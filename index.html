@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>🕹️ Escape the T</title>
+
+        <link rel="stylesheet" href="src/assets/css/index.min.css" />
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6334aa82516bac0012998627&product=inline-share-buttons' async='async'></script>    </head>
+    <body>
+        <div id="dino">
+            <span id="press-to-play" class="press-to-play">Press space to play</span>
+            <div class="score hidden">
+                <span class="highscore hidden">HI 00000</span>
+                <span class="current-score">000000</span>
+            </div>
+            <div class="game-over hidden">
+                <div class="game-over-text">GAME OVER</div>
+                <div class="replay-button">🔄</div>
+            </div>
+        </div>
+        <div id="hidden-elements">
+        <button class="fullscreen-btn" onclick="fullscreen()">Fullscreen</button><br>
+        <!-- ShareThis BEGIN -->
+        <div class="sharethis-inline-share-buttons"></div>
+        <div class="sharethis-inline-reaction-buttons"></div>
+        <!-- ShareThis END -->
+        </div>
+        <script src="phaser.min.js"></script>
+        <script src="src/index.min.js" type="module"></script>
+    <script>
+        const hiddenElements = document.getElementById("hidden-elements");
+        function fullscreen() {
+            document.body.requestFullscreen()
+        }
+
+        document.addEventListener('fullscreenchange', exitHandler, false);
+        document.addEventListener('mozfullscreenchange', exitHandler, false);
+        document.addEventListener('MSFullscreenChange', exitHandler, false);
+        document.addEventListener('webkitfullscreenchange', exitHandler, false);
+
+        function exitHandler()
+        {
+            if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement)
+            {
+                hiddenElements.style.display = "unset";
+            }
+            else {
+                hiddenElements.style.display = "none";
+            }
+        }
+    </script>
+    </body>
+</html>
