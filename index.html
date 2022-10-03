@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>🕹️ Escape the T</title>
 
-        <link rel="stylesheet" href="src/assets/css/index.min.css" />
-        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6334aa82516bac0012998627&product=inline-share-buttons' async='async'></script>    </head>
-    <body>
-        <div id="dino">
-            <span id="press-to-play" class="press-to-play">Press space to play</span>
-            <div class="score hidden">
-                <span class="highscore hidden">HI 00000</span>
-                <span class="current-score">000000</span>
-            </div>
-            <div class="game-over hidden">
-                <div class="game-over-text">GAME OVER</div>
-                <div class="replay-button">🔄</div>
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🕹️ Escape the T</title>
+
+    <link rel="stylesheet" href="src/assets/css/index.min.css" />
+    <script type='text/javascript'
+        src='https://platform-api.sharethis.com/js/sharethis.js#property=6334aa82516bac0012998627&product=inline-share-buttons'
+        async='async'></script>
+</head>
+
+<body>
+    <div id="dino">
+        <span id="press-to-play" class="press-to-play">Press space to play</span>
+        <div class="score hidden">
+            <span class="highscore hidden">HI 00000</span>
+            <span class="current-score">000000</span>
         </div>
-        <div id="hidden-elements">
+        <div class="game-over hidden">
+            <div class="game-over-text">GAME OVER</div>
+            <div class="replay-button">🔄</div>
+        </div>
+    </div>
+    <div id="hidden-elements">
         <button class="fullscreen-btn" onclick="fullscreen()">Fullscreen</button><br>
         <!-- ShareThis BEGIN -->
         <div class="sharethis-inline-share-buttons"></div>
         <div class="sharethis-inline-reaction-buttons"></div>
         <!-- ShareThis END -->
-        </div>
-        <script src="phaser.min.js"></script>
-        <script src="src/index.min.js" type="module"></script>
+        <p>Made with 😂 by <a href="https://github.com/Sid220/">The Fake Slim Shady</a>. <a
+                href="https://github.com/sid220/escapethet/stargazers"
+                data-href="https://github.com/sid220/escapethet/stargazers"
+                title="https://github.com/sid220/escapethet/stargazers"><img
+                    src="https://img.shields.io/github/stars/sid220/escapethet?style=social&amp;label=star"
+                    alt="GitHub stars"
+                    data-src="https://img.shields.io/github/stars/sid220/escapethet?style=social&amp;label=star"></a>
+            <a href="https://github.com/sid220/escapethet/network"
+                data-href="https://github.com/sid220/escapethet/network"
+                title="https://github.com/sid220/escapethet/network"><img
+                    src="https://img.shields.io/github/forks/sid220/escapethet?label=fork%20on%20Github&amp;style=social"
+                    alt="GitHub forks"
+                    data-src="https://img.shields.io/github/forks/sid220/escapethet?label=fork%20on%20Github&amp;style=social"></a>
+        </p>
+    </div>
+    <script src="phaser.min.js"></script>
+    <script src="src/index.min.js" type="module"></script>
     <script>
         const hiddenElements = document.getElementById("hidden-elements");
         function fullscreen() {
@@ -39,10 +58,8 @@
         document.addEventListener('MSFullscreenChange', exitHandler, false);
         document.addEventListener('webkitfullscreenchange', exitHandler, false);
 
-        function exitHandler()
-        {
-            if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement)
-            {
+        function exitHandler() {
+            if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
                 hiddenElements.style.display = "unset";
             }
             else {
@@ -50,5 +67,6 @@
             }
         }
     </script>
-    </body>
+</body>
+
 </html>
