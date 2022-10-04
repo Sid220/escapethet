@@ -19,6 +19,9 @@ class Levels extends Phaser.Scene {
     }
 
     create() {
+
+        this.input.setPollAlways();
+
         const changeScene = (level = 1, highScore = 250, speed = 1, cactusSpawn = [10000, 4000]) => {
             console.log(level + " " + (parseInt(localStorage.getItem("level")) + 1));
             if(level <= parseInt(localStorage.getItem("level")) + 1) {
@@ -30,9 +33,9 @@ class Levels extends Phaser.Scene {
                     currentLevel: level
                 });
             }
-            else {
-                alert("This level is not yet available to you!")
-            }
+            // else {
+            //     alert("This level is not yet available to you!")
+            // }
         }
         image = this.add.image(500, 500, 'levels');
 
@@ -121,19 +124,24 @@ class Levels extends Phaser.Scene {
             case 19:
                 this.add.image(800, 510, "train");
                 break;
+            case 20:
+                if(!localStorage.getItem("hasWon")) {
+                    localStorage.setItem("hasWon", "fax");
+                    alert("You've beat the Orange Line!");
+                }
+                break;
             default:
                 alert("💀 Unexpected Error!");
                 break;
         }
 
-        this.input.setPollAlways();
-
-        levelZones.forEach((showZone) => {
-            var graphics = this.add.graphics();
-            var color = 0xffff00;
-            graphics.lineStyle(2, color);
-            graphics.strokeRect(showZone.x + showZone.input.hitArea.x, showZone.y + showZone.input.hitArea.y, showZone.input.hitArea.width, showZone.input.hitArea.height);
-        });
+        // Show levelZones; For development purposes only.
+        // levelZones.forEach((showZone) => {
+        //     var graphics = this.add.graphics();
+        //     var color = 0xffff00;
+        //     graphics.lineStyle(2, color);
+        //     graphics.strokeRect(showZone.x + showZone.input.hitArea.x, showZone.y + showZone.input.hitArea.y, showZone.input.hitArea.width, showZone.input.hitArea.height);
+        // });
 
         levelZones[0].on('pointerdown', function () {
                 changeScene(1);
@@ -151,49 +159,49 @@ class Levels extends Phaser.Scene {
             changeScene(5, 650, 4.5, [15000, 4000]);
         });
         levelZones[5].on('pointerdown', function() {
-            changeScene(6, 650, 4.5, [15000, 4000]);
+            changeScene(6, 750, 4.5, [15000, 4000]);
         });
         levelZones[6].on('pointerdown', function() {
-            changeScene(7, 650, 4.5, [15000, 4000]);
+            changeScene(7, 750, 4.5, [16000, 4000]);
         });
         levelZones[7].on('pointerdown', function() {
-            changeScene(8, 650, 4.5, [15000, 4000]);
+            changeScene(8, 750, 4.5, [17000, 4000]);
         });
         levelZones[8].on('pointerdown', function() {
-            changeScene(9, 650, 4.5, [15000, 4000]);
+            changeScene(9, 650, 4.5, [18000, 4000]);
         });
         levelZones[9].on('pointerdown', function() {
-            changeScene(10, 650, 4.5, [15000, 4000]);
+            changeScene(10, 650, 5, [18000, 4000]);
         });
         levelZones[10].on('pointerdown', function() {
-            changeScene(11, 650, 4.5, [15000, 4000]);
+            changeScene(11, 650, 5.5, [18000, 4000]);
         });
         levelZones[11].on('pointerdown', function() {
-            changeScene(12, 650, 4.5, [15000, 4000]);
+            changeScene(12, 650, 6, [18000, 4000]);
         });
         levelZones[12].on('pointerdown', function() {
-            changeScene(13, 650, 4.5, [15000, 4000]);
+            changeScene(13, 650, 6, [19000, 4000]);
         });
         levelZones[13].on('pointerdown', function() {
-            changeScene(14, 650, 4.5, [15000, 4000]);
+            changeScene(14, 650, 6, [20000, 4000]);
         });
         levelZones[14].on('pointerdown', function() {
-            changeScene(15, 650, 4.5, [15000, 4000]);
+            changeScene(15, 750, 6, [20000, 4000]);
         });
         levelZones[15].on('pointerdown', function() {
-            changeScene(16, 650, 4.5, [15000, 4000]);
+            changeScene(16, 850, 6, [20000, 4000]);
         });
         levelZones[16].on('pointerdown', function() {
-            changeScene(17, 650, 4.5, [15000, 4000]);
+            changeScene(17, 650, 6.5, [20000, 4000]);
         });
         levelZones[17].on('pointerdown', function() {
-            changeScene(18, 650, 4.5, [15000, 4000]);
+            changeScene(18, 650, 6.5, [21000, 4000]);
         });
         levelZones[18].on('pointerdown', function() {
-            changeScene(19, 650, 4.5, [15000, 4000]);
+            changeScene(19, 750, 6.5, [21000, 4000]);
         });
         levelZones[19].on('pointerdown', function() {
-            changeScene(20, 650, 4.5, [15000, 4000]);
+            changeScene(20, 1000, 7, [22000, 4000]);
         });
     }
 

@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🕹️ Escape the T</title>
-
-    <link rel="stylesheet" href="src/assets/css/index.min.css" />
-    <script type='text/javascript'
-        src='https://platform-api.sharethis.com/js/sharethis.js#property=6334aa82516bac0012998627&product=inline-share-buttons'
-        async='async'></script>
-</head>
-
-<body>
-    <div id="dino">
-        <span id="press-to-play" class="press-to-play">Press space to play</span>
-        <div class="score hidden">
-            <span class="highscore hidden">HI 00000</span>
-            <span class="current-score">000000</span>
+    <head>
+        <meta charset="UTF-8" />
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+        <title>🕹️ Escape the T</title>
+        <meta name="description" content="A satirical game based on the many MBTA's T Orange Line crises.">
+        <meta name="keywords" content="MBTA, T, Game, Orange Line, Fire">
+        <meta name="author" content="The Fake Slim Shady">
+        <link rel="stylesheet" href="src/assets/css/index.min.css" />
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6334aa82516bac0012998627&product=inline-share-buttons' async='async'></script>    </head>
+    <body>
+        <div id="dino">
+            <span id="press-to-play" class="press-to-play">Press space to play</span>
+            <div class="score hidden">
+                <span class="highscore hidden">HI 00000</span>
+                <span class="current-score">000000</span>
+            </div>
+            <div class="game-over hidden">
+                <div class="game-over-text">GAME OVER</div>
+                <div class="replay-button">🔄</div>
+            </div>
         </div>
-        <div class="game-over hidden">
-            <div class="game-over-text">GAME OVER</div>
-            <div class="replay-button">🔄</div>
-        </div>
-    </div>
-    <div id="hidden-elements">
+        <div id="hidden-elements">
         <button class="fullscreen-btn" onclick="fullscreen()">Fullscreen</button><br>
         <!-- ShareThis BEGIN -->
         <div class="sharethis-inline-share-buttons"></div>
@@ -58,8 +55,10 @@
         document.addEventListener('MSFullscreenChange', exitHandler, false);
         document.addEventListener('webkitfullscreenchange', exitHandler, false);
 
-        function exitHandler() {
-            if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+        function exitHandler()
+        {
+            if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement)
+            {
                 hiddenElements.style.display = "unset";
             }
             else {
@@ -67,6 +66,5 @@
             }
         }
     </script>
-</body>
-
+    </body>
 </html>

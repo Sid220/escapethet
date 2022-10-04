@@ -1,7 +1,7 @@
 import Player from './objects/Player.min.js'
 import Cactus from './objects/Cactus.min.js'
 
-// import Levels from './levels.min.js';
+import Levels from './levels.min.js';
 
 import { showScore, resetScore } from './ui/score.min.js'
 import { hidePressToPlay, hideGameOver } from './ui/gameState.min.js'
@@ -103,14 +103,24 @@ class Dino extends Phaser.Scene {
                 if(parseInt(localStorage.getItem("level")) < currentLevel) {
                     localStorage.setItem("level", currentLevel);
                 }
-                this.scene.stop();
-                alert("You've beat this level!");
-                window.location.reload();
+                this.scene.pause();
+                alert("You've beat this level!", () => {
+                    // this.sys.game.destroy(true);
+                    // window.startGame();
+                    this.scene.start("Levels");
+                }, "Next");
             }
         }
 
         if (this.state.gameOver) {
             this.state.cactuses.forEach(cactus => cactus.stop());
+
+            // GameOver video -> Maybe someday...
+            // let video = this.add.video(0, 0, "gameover");
+            // video.on("complete", () => {
+            //     video.destroy();
+            // })
+            // video.play(false);
         }
 
         if (this.inputs.space.isDown && this.state.gameOver) {

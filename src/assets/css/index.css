@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ArcadeClassic'; /*a name to be used later*/
-    src: url('ARCADECLASSIC.ttf'); /*URL to font*/
+    src: url('https://cdn.jsdelivr.net/gh/sid220/escapethet@master/src/assets/css/ARCADECLASSIC.TTF'); /*URL to font*/
 }
 #dino {
     position: relative;
@@ -14,7 +14,7 @@
     font-family: ArcadeClassic, serif;
 }
 
-.fullscreen-btn {
+button {
     background-image: url("../button.png");
     width: 128px;
     border: none;
@@ -23,8 +23,34 @@
     font-size: 20px;
     display: block;
 }
-.fullscreen-btn:hover {
+button:hover {
     background-color: white;
+}
+
+/*.p-message {*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: 30%;*/
+/*    transform: translate(-50%, -30%);*/
+/*}*/
+
+/*.user-btn {*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: 40%;*/
+/*    transform: translate(-50%, -40%);*/
+/*}*/
+.user-btn {
+    margin: auto;
+}
+.user-div {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+    background-color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 #dino > span,
