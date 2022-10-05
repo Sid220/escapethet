@@ -75,7 +75,7 @@ class Dino extends Phaser.Scene {
         this.state.timer.speedLoop += delta;
         this.state.timer.cactusSpawnLoop += delta;
 
-        if (this.inputs.space.isDown && !this.state.started && !this.state.gameOver) {
+        if ((this.inputs.space.isDown || window.isBeingClicked) && !this.state.started && !this.state.gameOver) {
             this.state.started = true;
             document.getElementById("press-to-play").style.display = "none";
         }
@@ -107,7 +107,9 @@ class Dino extends Phaser.Scene {
                 alert("You've beat this level!", () => {
                     // this.sys.game.destroy(true);
                     // window.startGame();
-                    this.scene.start("Levels");
+                // this.sys.game.scene.add("Levels", Levels);
+                // this.scene.start("Levels");
+                    location.reload()
                 }, "Next");
             }
         }
@@ -123,7 +125,7 @@ class Dino extends Phaser.Scene {
             // video.play(false);
         }
 
-        if (this.inputs.space.isDown && this.state.gameOver) {
+        if ((this.inputs.space.isDown || window.isBeingClicked) && this.state.gameOver) {
             this.restartGame();
         }
 

@@ -20,18 +20,37 @@ class Levels extends Phaser.Scene {
 
     create() {
 
-        this.input.setPollAlways();
-
-        const changeScene = (level = 1, highScore = 250, speed = 1, cactusSpawn = [10000, 4000]) => {
+        const changeScene = (level = 1, highScore = 150, speed = 1, cactusSpawn = [10000, 4000]) => {
             console.log(level + " " + (parseInt(localStorage.getItem("level")) + 1));
             if(level <= parseInt(localStorage.getItem("level")) + 1) {
                 pressToPlay.style.display = "block";
+                levelZones[0].off('pointerdown');
+                levelZones[1].off('pointerdown');
+                levelZones[2].off('pointerdown');
+                levelZones[3].off('pointerdown');
+                levelZones[4].off('pointerdown');
+                levelZones[5].off('pointerdown');
+                levelZones[6].off('pointerdown');
+                levelZones[7].off('pointerdown');
+                levelZones[8].off('pointerdown');
+                levelZones[9].off('pointerdown');
+                levelZones[10].off('pointerdown');
+                levelZones[11].off('pointerdown');
+                levelZones[12].off('pointerdown');
+                levelZones[13].off('pointerdown');
+                levelZones[14].off('pointerdown');
+                levelZones[15].off('pointerdown');
+                levelZones[16].off('pointerdown');
+                levelZones[17].off('pointerdown');
+                levelZones[18].off('pointerdown');
+                levelZones[19].off('pointerdown');
                 this.scene.start("Dino", {
                     speed: speed,
                     cactusSpawn: cactusSpawn,
                     desiredScore: highScore,
                     currentLevel: level
                 });
+                this.scene.remove("Levels");
             }
             // else {
             //     alert("This level is not yet available to you!")
@@ -143,6 +162,29 @@ class Levels extends Phaser.Scene {
         //     graphics.strokeRect(showZone.x + showZone.input.hitArea.x, showZone.y + showZone.input.hitArea.y, showZone.input.hitArea.width, showZone.input.hitArea.height);
         // });
 
+        levelZones[0].off('pointerdown');
+        levelZones[1].off('pointerdown');
+        levelZones[2].off('pointerdown');
+        levelZones[3].off('pointerdown');
+        levelZones[4].off('pointerdown');
+        levelZones[5].off('pointerdown');
+        levelZones[6].off('pointerdown');
+        levelZones[7].off('pointerdown');
+        levelZones[8].off('pointerdown');
+        levelZones[9].off('pointerdown');
+        levelZones[10].off('pointerdown');
+        levelZones[11].off('pointerdown');
+        levelZones[12].off('pointerdown');
+        levelZones[13].off('pointerdown');
+        levelZones[14].off('pointerdown');
+        levelZones[15].off('pointerdown');
+        levelZones[16].off('pointerdown');
+        levelZones[17].off('pointerdown');
+        levelZones[18].off('pointerdown');
+        levelZones[19].off('pointerdown');
+
+        this.input.setPollAlways();
+
         levelZones[0].on('pointerdown', function () {
                 changeScene(1);
         });
@@ -195,13 +237,13 @@ class Levels extends Phaser.Scene {
             changeScene(17, 650, 6.5, [20000, 4000]);
         });
         levelZones[17].on('pointerdown', function() {
-            changeScene(18, 650, 6.5, [21000, 4000]);
+            changeScene(18, 750, 6.5, [21000, 4000]);
         });
         levelZones[18].on('pointerdown', function() {
-            changeScene(19, 750, 6.5, [21000, 4000]);
+            changeScene(19, 850, 7, [21000, 4000]);
         });
         levelZones[19].on('pointerdown', function() {
-            changeScene(20, 1000, 7, [22000, 4000]);
+            changeScene(20, 1000, 7.5, [22000, 3000]);
         });
     }
 
