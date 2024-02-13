@@ -1,6 +1,6 @@
 # Escape the T
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fescapethet.tk)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fescapethet.tk) [![GitHub stars](https://img.shields.io/github/stars/sid220/escapethet?style=social&label=star)](https://github.com/sid220/escapethet/stargazers) [![GitHub forks](https://img.shields.io/github/forks/sid220/escapethet?label=fork%20on%20Github&style=social)](https://github.com/sid220/escapethet/network)
-<br>A satirical game based on the Orange Line's many crises. Play online at [escapethet.tk](https://escapethet.tk).
+<br>A satirical game based on the Orange Line's many crises. Play online at [https://escapethet.sidtrz.com](https://escapethet.sidtrz.com).
 ## Screenshots
 ### Level menu<br>
 ![Level menu](screenshots/1.png)<br>
